@@ -122,7 +122,7 @@ github.com(https://github.com/)
 
 
 ---
-Copyright &copy;GandrungStudio 2018 
+Copyright &copy;mediocaddemy 2018 
 Dilarang memperbanyak dan mendistribusikan Materi Training ini tanpa ijin dari PT.Gandrung Media Corporation. Pelanggaran akan hak cipta ini akan kami ajukan ke Institusi Hukum yang berlaku.
 
 

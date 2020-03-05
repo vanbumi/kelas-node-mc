@@ -1,5 +1,9 @@
 ### Bagian Ke 8
 
+**MOHON DIBACA!: Sehubungan dengan mlab.com sudah tidak lagi melakukan layanan user baru, maka mlab digantikan dengan Mongdb Atlas, anda bisa membuaat akun di mongodb.com**
+
+**Untuk itu ikuti modul tutorial menggunakan PDF ini, semua sintaks koding tetap sama, yang berbeda adalah mengganti mlab dengan mongodb Atlas, termasuk cara koneksi nya sama seperti di mlab, ikuti tutorial video nya dan gunakan mongodb Atlas, pengganti mlab.**
+
 ## MongoDB dan Mongoose Part 3
 
 Pada materi ini kita akan belajar bagaimana mencari data di dalama collections, belajar bagaimana menemukan spesifik object didalam collections, kita juga akan belajar update dan remove data didalam collections.

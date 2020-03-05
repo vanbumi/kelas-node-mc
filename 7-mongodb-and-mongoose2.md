@@ -1,5 +1,9 @@
 ### Bagian Ke 7
 
+**MOHON DIBACA!: Sehubungan dengan mlab.com sudah tidak lagi melakukan layanan user baru, maka mlab digantikan dengan Mongdb Atlas, anda bisa membuaat akun di mongodb.com**
+
+**Untuk itu ikuti modul tutorial menggunakan PDF ini, semua sintaks koding tetap sama, yang berbeda adalah mengganti mlab dengan mongodb Atlas, termasuk cara koneksi nya sama seperti di mlab, ikuti tutorial video nya dan gunakan mongodb Atlas, pengganti mlab.**
+
 ## MongoDB dan Mongoose 2 
 
 Pada Video sebelumnya kita belajar menambahkan User baru dengan method GET, kali ini kita akan menggunakan method POST, yang umumnya method POST digunakan contohnya from input dan di kirim ke server dengan method POST.
@@ -42,6 +46,8 @@ Kemudian kita edit method POST sbb:
         res.json(user);
       })
     });
+
+### Postman
 
 Untuk test code tsb diatas kita gunakan POSTMAN, POSTMAN adalah sofware extenal untuk membantu kita untuk melakukan testing API / URL / REST. Gunakan POSTMAN yang diinstall atau POSTMAN google extention, gunakan keyword "POSTMAN google chrome" silahkan install atau bila anda sudah install sila "launch app" :
 

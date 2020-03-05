@@ -52,13 +52,15 @@ Setelah di import kita instantiasikan menjadi object yang kita sebut app:
 
 Setelah itu kita harus bind ke dalam sebuah port numbar pada localhost:
 
-    app.listen(3000, function(err){
-        if (err){
-            console.log(err);
-        } else {
-            console.log("Sukses running di port 3000")
-        }
-    }); 
+    // connection
+		mongoose.connect('mongodb://localhost/webnode', { useNewUrlParser: true });
+
+		var db = mongoose.connection;
+		db.on('error', console.error.bind(console, 'connection error:'));
+		db.once('open', function () {
+		});
+		// we're connected!
+		console.log('Connected to MongoDB') 
 
 --> Kemudian jalankan serser dengan perintah:
 

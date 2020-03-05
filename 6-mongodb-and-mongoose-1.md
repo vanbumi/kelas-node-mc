@@ -59,41 +59,18 @@ Kita akan membuat aplikasi untuk belajar mempraktekan mongodb dan mongoose ini, 
 
 -> di pada browser localhost:3000 dan localhost:3000/products 
 
-### Koneksi ke Cloud Database mlab.com
+### Koneksi ke Cloud Database Mongodb Atlas.
 
--> Kita akan menggunakan extenal / cloud database yaitu mlab.com
+**MOHON DIBACA!: Sehubungan dengan mlab.com sudah tidak lagi melakukan layanan user baru, maka mlab digantikan dengan Mongdb Atlas, anda bisa membuaat akun di mongodb.com**
 
--> Silahkan login ke mlab.com
+**Untuk itu ikuti modul tutorial menggunakan PDF ini, semua sintaks koding tetap sama, yang berbeda adalah mengganti mlab dengan mongodb Atlas, termasuk cara koneksi nya sama seperti di mlab, ikuti tutorial video nya dan gunakan mongodb Atlas, pengganti mlab.**
 
--> Create New database.
+-> Kita akan menggunakan extenal / cloud database yaitu Mongo Atlas di mmongodb.com
 
--> Pilih Single-node > Sandbox
+-> Silahkan login ke mongodb.com, bila belum registrasi silahkan signup dulu untuk membuat akun di mongodb Atlas.
 
--> Berinama database dengan "mongoosecoba".
+**Cara membuat akun di Mongodb Atlas** bisa di lihat di link ini: [https://github.com/vanbumi/setup-mongodb-atlas](https://github.com/vanbumi/setup-mongodb-atlas).
 
--> Klik button "Create new MongoDB deployment".  
-
--> Klik database nya.
-
--> Create new User.
-
--> Klik Users > klik Add database user. 
-
--> Masukan Database username misalnya 'root', password dan confirm password > klik Create.
-
--> Copy link 
-
--> Membuat 1 baris code untuk koneksi database:
-
-    mongoose.connect('..link dipaste disini..', function(err){
-      if (err){
-        console.log(err);
-      } else {
-        console.log("Connected to the database")
-      }
-    });
-
--> Kemudian cek di terminal :)
 
 ### Membuat Collections
 
@@ -127,7 +104,7 @@ Kemudian test di browser dengan URL localhost:3000/create-user.
 
 ->* Jangan lupa comment out latihan DINAMIC URL nya dulu.
 
-Bila kita cek di mlab.com data tidak tersimpan karena pada code diatas kita tidak memberikan perintah "save", edit code diatas menjadi sbb:
+Bila kita cek di mongodb Atlas data tidak tersimpan karena pada code diatas kita tidak memberikan perintah "save", edit code diatas menjadi sbb:
 
     app.get('/create-user', function(req, res, next){
       var user = new User();
@@ -143,11 +120,17 @@ Atau gunakan check error seperti dibawah ini:
       res.json(user);
     });
 
-Bila kita cek di mlab maka user baru tsb akan tersimpan.
+Bila kita cek di mlab maka user baru tsb akan tersimpan. Kode lengkapnya sbb :
 
 
-
-
+	app.get('/create-user', function(req, res, next){
+      var user = new User();
+      user.name = "Brandon";
+      user.age = 17;
+      user.save(function(err){
+      if (err) next(err);
+      res.json(user);
+    });
 
 
 
